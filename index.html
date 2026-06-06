@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Travelling Vilnius - kiki_is_travelling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1590425712124-7389498ca68c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .rating-star {
+            color: #fbbf24;
+        }
+
+        .section-tag {
+            background: #d97706; /* amber-600 */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- 導覽列 -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="text-lg font-bold tracking-widest text-amber-600 uppercase hero-title italic">Vilnius Guide</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#itinerary" class="hover:text-amber-600 transition">推薦行程</a>
+                <a href="#dining" class="hover:text-amber-600 transition">餐廳評鑑</a>
+                <a href="#highlights" class="hover:text-amber-600 transition">重點推介</a>
+                <a href="#tips" class="hover:text-amber-600 transition">旅人錦囊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主視覺區 -->
+    <header class="hero-bg h-[60vh] flex items-center justify-center text-center text-white pt-16">
+        <div class="px-4">
+            <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4 drop-shadow-2xl tracking-wide">Solo Travelling Vilnius</h1>
+            <p class="text-base md:text-lg opacity-90 mb-10 font-light tracking-[0.25em] uppercase">立陶宛四天三夜獨遊手札</p>
+            <div class="max-w-2xl mx-auto text-sm md:text-base leading-relaxed opacity-80 font-light italic mb-8">
+                「歡迎來到我的維爾紐斯旅行手札！這裡整理了我在立陶宛的真實體驗、<br class="hidden md:block">餐廳評鑑與重點推介。一起探索這座融合古典與現代魅力的城市！」
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+
+        <!-- 旅人錦囊 -->
+        <section id="tips" class="mb-24">
+            <div class="flex items-center justify-center mb-12 flex-col text-center">
+                <div class="w-12 h-1 bg-amber-600 mb-4"></div>
+                <h2 class="text-3xl font-bold text-slate-800 tracking-tight">旅人錦囊 Travel Tips</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-amber-50 border border-amber-100 rounded-3xl p-8 card-hover flex flex-col items-center text-center">
+                    <div class="bg-amber-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-bus text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-amber-900 mb-2">城市交通</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        當地巴士網絡發達，乘搭非常方便。你可以直接在車上使用<span class="text-amber-700 font-bold">信用卡感應支付</span>，不需要額外買票。
+                    </p>
+                </div>
+                <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 card-hover flex flex-col items-center text-center">
+                    <div class="bg-blue-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-taxi text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-blue-900 mb-2">計程車與支付</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        坐計程車不困難，推薦下載 <span class="text-blue-700 font-bold">Bolt</span> App，叫車非常容易且價格透明，安全有保障。
+                    </p>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-100 rounded-3xl p-8 card-hover flex flex-col items-center text-center">
+                    <div class="bg-emerald-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-user-shield text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-emerald-900 mb-2">國家安全</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        立陶宛國家安全程度高，治安狀況良好。對於 Solo Traveller 來說是一個非常友善且讓人放心的旅遊目的地。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我的行程 Itinerary -->
+        <section id="itinerary" class="mb-24">
+            <div class="flex items-center justify-center mb-16 flex-col">
+                <div class="w-12 h-1 bg-amber-600 mb-4"></div>
+                <h2 class="text-3xl font-bold text-slate-800 tracking-tight hero-title italic">🗺️ 我的行程 Itinerary</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Day 1 & 2 -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative">
+                        <div class="absolute -top-3 -left-3 section-tag text-white px-5 py-1 rounded-lg text-xs font-bold tracking-widest shadow-md">DAY 1</div>
+                        <h3 class="text-xl font-bold mb-4 mt-2">抵達維爾紐斯與高空日落</h3>
+                        <p class="text-xs text-slate-400 mb-6 flex items-center italic">
+                            <i class="fa-solid fa-hotel mr-2"></i> 住宿：<a href="https://www.google.com/maps/search/?api=1&query=Hotel+Vilnia+Vilnius" target="_blank" class="text-amber-700 font-bold hover:underline">Hotel Vilnia</a> (Trip.com 預訂)
+                        </p>
+                        <ul class="text-sm space-y-4 text-slate-600 border-l-2 border-slate-50 pl-4">
+                            <li><span class="text-amber-600 font-bold">上午：</span>抵達維爾紐斯，入住 Hotel Vilnia。</li>
+                            <li><span class="text-amber-600 font-bold">中午：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Bistro+18+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Bistro 18</a> 用餐。</li>
+                            <li><span class="text-amber-600 font-bold">下午：</span>遊覽 Pilies Street, St. Anne’s Church, Vilnius Cathedral, Gediminas Hill & Tower。</li>
+                            <li><span class="text-amber-600 font-bold">下午茶：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Pinavija+Cafe+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Pinavija Bakery</a> 享用下午茶。</li>
+                            <li><span class="text-amber-600 font-bold">傍晚：</span>體驗 <a href="https://www.google.com/maps/search/?api=1&query=Smile+Hot+Air+Balloons+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Smile Hot Air Balloon</a> 熱氣球之旅。</li>
+                            <li><span class="text-amber-600 font-bold">晚餐：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Etno+Dvaras+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Etno Dvaras</a> 用餐。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative">
+                        <div class="absolute -top-3 -left-3 section-tag text-white px-5 py-1 rounded-lg text-xs font-bold tracking-widest shadow-md">DAY 2</div>
+                        <h3 class="text-xl font-bold mb-4 mt-2">自由共和國與藝術魂</h3>
+                        <ul class="text-sm space-y-4 text-slate-600 border-l-2 border-slate-50 pl-4">
+                            <li><span class="text-amber-600 font-bold">上午：</span>酒店早餐後，深入 <a href="https://www.google.com/maps/search/?api=1&query=Uzupis+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">對岸共和國 (Užupis)</a>。遊覽 St. Anne’s Church、Pilies Street、Vilnius Cathedral (外部) 與 Gediminas Hill & Tower。</li>
+                            <li><span class="text-amber-600 font-bold">中午：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Uzupio+Kavine+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Užupio Kavine</a> 用餐。</li>
+                            <li><span class="text-amber-600 font-bold">下午：</span>參觀 <a href="https://www.google.com/maps/search/?api=1&query=Museum+of+Occupations+and+Freedom+Fights+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Museum of Occupations and Freedom Fights</a> (現場購票)。</li>
+                            <li><span class="text-amber-600 font-bold">晚餐：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Berneliu+Uzeiga+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Berneliu Užeiga</a> 用餐。</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Day 3 & 4 -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative">
+                        <div class="absolute -top-3 -left-3 section-tag text-white px-5 py-1 rounded-lg text-xs font-bold tracking-widest shadow-md">DAY 3</div>
+                        <h3 class="text-xl font-bold mb-4 mt-2">信仰與歷史的震撼</h3>
+                        <ul class="text-sm space-y-4 text-slate-600 border-l-2 border-slate-50 pl-4">
+                            <li><span class="text-amber-600 font-bold">上午：</span>前往 <a href="https://www.google.com/maps/search/?api=1&query=Hill+of+Crosses+Lithuania" target="_blank" class="text-slate-800 font-bold hover:underline">十字架山 (Hill of Crosses)</a>。</li>
+                            <li><span class="text-amber-600 font-bold">中午：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Arkos+Restaurant+Lithuania" target="_blank" class="text-slate-800 font-bold hover:underline">Arkos</a> 用餐。</li>
+                            <li><span class="text-amber-600 font-bold">晚餐：</span>返回維爾紐斯後，於 <a href="https://www.google.com/maps/search/?api=1&query=Lokys+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Lokys</a> 享用晚餐。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative">
+                        <div class="absolute -top-3 -left-3 section-tag text-white px-5 py-1 rounded-lg text-xs font-bold tracking-widest shadow-md">DAY 4</div>
+                        <h3 class="text-xl font-bold mb-4 mt-2">回味與告別</h3>
+                        <ul class="text-sm space-y-4 text-slate-600 border-l-2 border-slate-50 pl-4">
+                            <li><span class="text-amber-600 font-bold">上午：</span>酒店早餐。</li>
+                            <li><span class="text-amber-600 font-bold">近午：</span>參觀 <a href="https://www.google.com/maps/search/?api=1&query=MO+Museum+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">MO Museum</a> (現場購票)。</li>
+                            <li><span class="text-amber-600 font-bold">午餐：</span>於 <a href="https://www.google.com/maps/search/?api=1&query=Grey+Restaurant+Vilnius" target="_blank" class="text-slate-800 font-bold hover:underline">Grey</a> 用餐。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 餐廳評鑑 Dining Reviews -->
+        <section id="dining" class="mb-24">
+            <div class="flex items-center justify-center mb-16 flex-col">
+                <div class="w-12 h-1 bg-amber-600 mb-4"></div>
+                <h2 class="text-3xl font-bold text-slate-800 tracking-tight hero-title italic">🍽️ 餐廳評鑑 Dining Reviews</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Arkos -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border-t-4 border-amber-500 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-xl">Arkos</h4>
+                            <span class="rating-star">★★★★★</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">環境很好，食物也意外地質素高。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Arkos+Restaurant+Lithuania" target="_blank" class="text-amber-600 text-xs font-bold flex items-center hover:underline uppercase tracking-wider"><i class="fa-solid fa-location-dot mr-2"></i> Google Map</a>
+                </div>
+                <!-- Bistro 18 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-xl">Bistro 18</h4>
+                            <span class="rating-star">★★★★☆</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6">小餐廳，老闆十分親切，南瓜湯好喝。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bistro+18+Vilnius" target="_blank" class="text-slate-400 text-xs font-bold flex items-center hover:text-amber-600 transition"><i class="fa-solid fa-location-dot mr-2"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Lokys -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-bold text-xl">Lokys</h4>
+                            <span class="rating-star">★★★★☆</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6">鹿肉、野味香腸、Herring (鯡魚)十分有名，但個人只敢試Wild Boar (野豬肉)，口感佳且毫無騷味。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Lokys+Vilnius" target="_blank" class="text-slate-400 text-xs font-bold flex items-center hover:text-amber-600 transition"><i class="fa-solid fa-location-dot mr-2"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Berneliu Užeiga -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold">Berneliu Užeiga</h4>
+                            <span class="rating-star text-xs">★★★★☆</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-4 leading-relaxed">環境和食物都很好，需要預留時間排隊等位。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Berneliu+Uzeiga+Vilnius" target="_blank" class="text-slate-400 text-[10px] font-bold flex items-center hover:text-amber-600 transition mt-2"><i class="fa-solid fa-location-dot mr-1"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Etno Dvaras -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold">Etno Dvaras</h4>
+                            <span class="rating-star text-xs">★★★✨☆</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-4 leading-relaxed">如果你想試最正宗嘅立陶宛菜，呢度係首選。粉紅冷湯（Šaltibarščiai）係必點，但如果你唔係紅菜頭愛好者，可能未必習慣呢種酸爽嘅冷飲口感。（個人不喜紅菜頭）</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Etno+Dvaras+Vilnius" target="_blank" class="text-slate-400 text-[10px] font-bold flex items-center hover:text-amber-600 transition mt-2"><i class="fa-solid fa-location-dot mr-1"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Grey -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold">Grey</h4>
+                            <span class="rating-star text-xs">★★★✨☆</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-4 leading-relaxed">西餐，表現正常，適合想轉換口味的一餐。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Grey+Restaurant+Vilnius" target="_blank" class="text-slate-400 text-[10px] font-bold flex items-center hover:text-amber-600 transition mt-2"><i class="fa-solid fa-location-dot mr-1"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Pinavija Bakery -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold">Pinavija Bakery</h4>
+                            <span class="rating-star text-xs">★★★☆☆</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-4 leading-relaxed">適合喝杯咖啡、打個卡，但食物味道一般。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Pinavija+Cafe+Vilnius" target="_blank" class="text-slate-400 text-[10px] font-bold flex items-center hover:text-amber-600 transition mt-2"><i class="fa-solid fa-location-dot mr-1"></i> VIEW ON MAP</a>
+                </div>
+                <!-- Užupio Kavine -->
+                <div class="bg-red-50/50 p-6 rounded-2xl border border-red-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2 text-red-900">
+                            <h4 class="font-bold">Užupio Kavine</h4>
+                            <span class="rating-star text-xs">★★☆☆☆</span>
+                        </div>
+                        <p class="text-xs text-red-600/70 italic mb-4 leading-relaxed">食物正常，但人手嚴重不足，長時間等待叫餐、上菜、付款。</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Uzupio+Kavine+Vilnius" target="_blank" class="text-red-400 text-[10px] font-bold flex items-center hover:text-amber-600 transition mt-2"><i class="fa-solid fa-location-dot mr-1"></i> VIEW ON MAP</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 重點推介 Highlights (完全無圖片乾淨排版) -->
+        <section id="highlights">
+            <div class="flex items-center justify-center mb-16 flex-col">
+                <div class="w-12 h-1 bg-amber-600 mb-4"></div>
+                <h2 class="text-3xl font-bold text-slate-800 tracking-tight hero-title italic">🌟 重點推介 Highlights</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Smile Hot Air Balloon -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm card-hover flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-wind text-2xl text-amber-600"></i>
+                        </div>
+                        <span class="text-amber-600 text-xs font-bold tracking-widest uppercase block mb-2">極致體驗 MUST DO</span>
+                        <h4 class="text-2xl font-bold mb-3 hero-title italic">🎈 Smile Hot Air Balloon</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">飛行前溝通極佳，專業感滿分。從高空俯瞰維爾紐斯是非常寧靜且震撼的體驗。</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://hotairballoon.lt/en/" target="_blank" class="bg-amber-600 text-white px-6 py-2.5 rounded-full text-xs font-bold shadow-lg shadow-amber-100 hover:bg-amber-700 transition">官方預約連結</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Smile+Hot+Air+Balloons+Vilnius" target="_blank" class="bg-white text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full text-xs font-bold hover:bg-slate-50 transition">GOOGLE MAP</a>
+                    </div>
+                </div>
+
+                <!-- Hill of Crosses -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm card-hover flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-place-of-worship text-2xl text-slate-600"></i>
+                        </div>
+                        <span class="text-slate-400 text-xs font-bold tracking-widest uppercase block mb-2">歷史地標 ICONIC</span>
+                        <h4 class="text-2xl font-bold mb-3 hero-title italic">✝️ 十字架山 (Hill of Crosses)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">立陶宛和平與忍耐的象徵，帶來無與倫比的視覺與心靈震撼。</p>
+                        <div class="bg-slate-50 p-4 rounded-xl mb-6 border border-slate-100 text-xs text-slate-500 leading-relaxed text-left">
+                            <strong class="text-slate-700 block mb-1">🚌 交通提示</strong>
+                            搭乘火車/巴士從 Vilnius Central Station前往 Siauliai 站
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.autobusubilietai.lt/en" target="_blank" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold shadow-lg shadow-slate-200 hover:bg-slate-800 transition">車票預訂網站</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Hill+of+Crosses+Lithuania" target="_blank" class="bg-white text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full text-xs font-bold hover:bg-slate-50 transition">GOOGLE MAP</a>
+                    </div>
+                </div>
+
+                <!-- Užupis -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm card-hover flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-palette text-2xl text-red-600"></i>
+                        </div>
+                        <span class="text-red-500 text-xs font-bold tracking-widest uppercase block mb-2">藝術街區 ARTISTIC</span>
+                        <h4 class="text-2xl font-bold mb-3 hero-title italic">🎭 對岸共和國 (Užupis)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">充滿波希米亞風情的藝術特區，擁有獨立憲法、總統與旗幟。在維爾尼亞河畔漫讀奇特憲法，是獨自旅行放空的最佳地點。</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Uzupis+Vilnius" target="_blank" class="bg-white text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full text-xs font-bold hover:bg-slate-50 transition">GOOGLE MAP</a>
+                    </div>
+                </div>
+
+                <!-- Museums -->
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm card-hover flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-landmark text-2xl text-blue-600"></i>
+                        </div>
+                        <span class="text-blue-500 text-xs font-bold tracking-widest uppercase block mb-2">歷史與美學 MUSEUMS</span>
+                        <h4 class="text-2xl font-bold mb-3 hero-title italic">🏛️ 歷史與藝術的對話</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            <strong>MO Museum：</strong>當代藝術館，展現美學氛圍。<br class="mb-2">
+                            <strong>自由奮鬥博物館：</strong>前 KGB 總部，深刻記錄立陶宛追求自由與抗爭的歷史。
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.google.com/maps/search/?api=1&query=MO+Museum+Vilnius" target="_blank" class="bg-white text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full text-xs font-bold hover:bg-slate-50 transition">MO Museum MAP</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Museum+of+Occupations+and+Freedom+Fights+Vilnius" target="_blank" class="bg-white text-slate-800 border border-slate-200 px-6 py-2.5 rounded-full text-xs font-bold hover:bg-slate-50 transition font-sans">KGB MAP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-950 text-white py-20 text-center mt-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <h3 class="text-2xl font-bold mb-4 tracking-widest uppercase hero-title italic">Solo Travelling Vilnius</h3>
+            <p class="text-slate-500 text-sm mb-12 max-w-lg mx-auto font-light leading-relaxed">這是我的維爾紐斯旅行手札。願你的獨身冒險同樣精彩動人且平安順利。</p>
+            <div class="h-px bg-slate-800 w-32 mx-auto mb-8"></div>
+            <p class="text-slate-700 text-[10px] tracking-[0.4em] uppercase">© 2025 kiki_in_vilnius | 波羅本地區獨旅記憶</p>
+        </div>
+    </footer>
+
+</body>
+</html>
